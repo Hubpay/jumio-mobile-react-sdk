@@ -30,7 +30,7 @@ Create React Native project and add the Jumio Mobile SDK module to it.
 ```sh
 react-native init MyProject
 cd MyProject
-npm install --save https://github.com/Jumio/mobile-react.git#v4.5.0
+npm install --save https://github.com/Hubpay/jumio-mobile-react-sdk#v4.5.1
 ```
 
 ## Integration
@@ -40,7 +40,7 @@ npm install --save https://github.com/Jumio/mobile-react.git#v4.5.0
 2. Your app's deployment target must be at least iOS 11.0
 
 ### Android
-__AndroidManifest__    
+__AndroidManifest__
 Open your AndroidManifest.xml file and change `allowBackup` to false. Add user permission `HIGH_SAMPLING_RATE_SENSORS` to access sensor data with a sampling rate greater than 200 Hz.
 
 ```xml
@@ -62,7 +62,7 @@ android {
 }
 ```
 
-__Enable MultiDex__    
+__Enable MultiDex__
 Follow the Android developers guide: https://developer.android.com/studio/build/multidex.html
 
 ```groovy
@@ -75,7 +75,7 @@ android {
 }
 ```
 
-__Upgrade Gradle build tools__    
+__Upgrade Gradle build tools__
 The plugin requires at least version 4.0.0 of the Android build tools. This transitively requires and upgrade of the Gradle wrapper to version 7 and an update to Java 11.
 
 Upgrade build tools version to 7.2.0 in android/build.gradle:
@@ -92,7 +92,7 @@ buildscript {
 
 Modify the Gradle Wrapper version in android/gradle.properties.
 
-__Repository__    
+__Repository__
 Add the Jumio Mobile SDK repository:
 
 ```groovy
@@ -109,7 +109,7 @@ exclusiveContent {
 }
 ```
 
-***Proguard Rules***    
+***Proguard Rules***
 For information on Android Proguard Rules concerning the Jumio SDK, please refer to our [Android guides](https://github.com/Jumio/mobile-sdk-android#proguard).
 
 ## Usage
@@ -388,7 +388,7 @@ Also make sure that [Flipper](https://fbflipper.com/) is disabled for your proje
 Please also refer to the [Podfile](DemoApp/ios/Podfile) of our sample application for further details.
 
 ### iOS Localization
-After installing Cocoapods, please localize your iOS application using the languages provided at the following path:   
+After installing Cocoapods, please localize your iOS application using the languages provided at the following path:
 `ios -> Pods -> Jumio -> Localizations -> xx.lproj`
 
 ![Localization](images/RN_localization.gif)
